@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Visual learn Data Structure</string>
+    <string name="home">Home</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="forget_password"><u>Forget Password?</u></string>
+    <string name="create_account"><u>Create Account</u></string>
 </resources>
