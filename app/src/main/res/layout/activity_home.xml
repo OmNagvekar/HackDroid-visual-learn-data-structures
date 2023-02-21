@@ -6,4 +6,184 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="5dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/welcome_back"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        />
+
+
+    <TextView
+        android:id="@+id/UserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="UserName"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
+        />
+
+    <TextView
+        android:id="@+id/chooseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/UserName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Choose Subject"
+        android:textSize="18dp"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="1000dp"
+        android:layout_marginLeft="50sp"
+        />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/myBottomNavView"
+        app:layout_constraintTop_toBottomOf="@id/chooseText"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center|top"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            >
+
+            <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:background="@color/backgroundTheme"
+            android:layout_gravity="center"
+                app:cardBackgroundColor="@color/backgroundTheme"
+                app:cardCornerRadius="30sp"
+            >
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/syntax_logo"
+                    android:layout_margin="20dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Basic Syntax"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:layout_margin="20dp"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:background="@color/backgroundTheme"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                app:cardBackgroundColor="@color/backgroundTheme"
+                app:cardCornerRadius="30sp"
+                >
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/dsa_logo"
+                        android:layout_margin="20dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Data Structure"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:layout_margin="20dp"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:background="@color/backgroundTheme"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                app:cardBackgroundColor="@color/backgroundTheme"
+                app:cardCornerRadius="30sp"
+                >
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/oop_logo"
+                        android:layout_margin="20dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Object Oriented Programming"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:layout_margin="20dp"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/myBottomNavView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
